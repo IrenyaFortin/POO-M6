@@ -10,23 +10,51 @@ package poop2.m6.grupal.Clases;
  */
 
 public class Persona {
-  
+
+    private String dni;
     private String nombre;
+    private String apellido;
     private int edad;
-
-
-    public Persona(String nombre, int edad) {
+    private String nacionalidad;
+    
+     public void DatosPersonas() {
+        System.out.println("Dni: " + dni );
+        System.out.println("Nombre: " + nombre );
+        System.out.println("Apellido: " + apellido );
+        System.out.println("Edad:"  + edad);
+        System.out.println("Nacionalidad: " + nacionalidad );
+    }
+    
+    public Persona(String dni, String nombre, String apellido, int edad, String nacionalidad) {
+        this.dni = dni;
         this.nombre = nombre;
+        this.apellido = apellido;
         this.edad = edad;
+        this.nacionalidad = nacionalidad;
+    }
+    
+    public String getDni() {
+        return dni;
     }
 
-    // Métodos getter y setter
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public int getEdad() {
@@ -37,10 +65,15 @@ public class Persona {
         this.edad = edad;
     }
 
-    public void mostrarInfo() {
-        System.out.println("Nombre: " + nombre );
-        System.out.println("Edad:"  + edad);
+    public String getNacionalidad() {
+        return nacionalidad;
     }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+  
+   
 }
 
 
